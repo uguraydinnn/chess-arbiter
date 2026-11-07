@@ -3,23 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Chess Arbiter</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Chess Arbiter: chess clock, scoresheet and arbiter</title>
+  <meta name="description" content="A chess clock, scoresheet and rules arbiter for over-the-board chess. Every move checked against the FIDE Laws. Offline, no ads, free.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chess Arbiter">
+  <meta property="og:title" content="Chess Arbiter: chess clock, scoresheet and arbiter">
+  <meta property="og:description" content="A chess clock, scoresheet and rules arbiter for over-the-board chess. Every move checked against the FIDE Laws. Offline, no ads, free.">
+  <meta property="og:url" content="https://arbiterchess.com/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <link rel="alternate" hreflang="x-default" href="https://arbiterchess.com/">
+  <link rel="canonical" href="https://arbiterchess.com/">
+  <link rel="alternate" hreflang="en" href="https://arbiterchess.com/">
+  <link rel="alternate" hreflang="tr" href="https://arbiterchess.com/tr/">
+  <link rel="preload" href="assets/fonts/Manrope_400Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Manrope_600SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/landing.css">
 </head>
 <body>
-<main>
-  <h1>Chess Arbiter</h1>
-  <p class="meta">Chess clock, scoresheet and arbiter for over-the-board chess. · Tahta başı satranç için saat, hamle notu ve hakem.</p>
-  <p>Every move is checked against the FIDE Laws of Chess: illegal moves, repetition, the 50-move rule and flag fall. Works offline, no accounts, no ads, no data collection.</p>
-  <p lang="tr">Her hamle FIDE Satranç Kurallarına göre denetlenir: kural dışı hamle, tekrar, 50 hamle kuralı ve bayrak düşmesi. Çevrimdışı çalışır; hesap, reklam ya da veri toplama yoktur.</p>
-  <nav>
-    <a href="support/">Support · Destek</a>
-    <a href="privacy/">Privacy · Gizlilik</a>
-    <a href="licenses/">Licences · Lisanslar</a>
-  </nav>
-  <footer>© 2026 Uğur Aydın. Chess Arbiter is not affiliated with FIDE.</footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="./"><img src="assets/icon-56.png" alt="" width="28" height="28"> Chess Arbiter</a>
+  <nav aria-label="Main"><a href="#features">Features</a><a href="#learn">Learn</a><a href="#faq">FAQ</a><a class="lang" href="tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="copy">
+    <h1>Clock, scoresheet and arbiter.<br>One screen.</h1>
+    <p class="sub">For chess on a real board. Your phone keeps time, records every move and checks it against the FIDE Laws of Chess. Works offline and is free.</p>
+    <p class="cta">Coming to the App Store · December 2026</p>
+    <p class="note">iPhone and iPad · English and Turkish</p>
+  </div>
+  <div class="device" aria-hidden="true"><div class="screen">
+  <div class="clock"><span>4:52</span></div>
+  <div class="center"><div class="board"><i class="l"><img src="assets/pieces/bR.svg" alt=""></i><i class="d"></i><i class="l"><img src="assets/pieces/bB.svg" alt=""></i><i class="d"><img src="assets/pieces/bQ.svg" alt=""></i><i class="l"><img src="assets/pieces/bK.svg" alt=""></i><i class="d"><img src="assets/pieces/bB.svg" alt=""></i><i class="l"><img src="assets/pieces/bN.svg" alt=""></i><i class="d"><img src="assets/pieces/bR.svg" alt=""></i><i class="d"></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"></i><i class="l"><img src="assets/pieces/bN.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"><img src="assets/pieces/wB.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/wN.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wR.svg" alt=""></i><i class="l"><img src="assets/pieces/wN.svg" alt=""></i><i class="d"><img src="assets/pieces/wB.svg" alt=""></i><i class="l"><img src="assets/pieces/wQ.svg" alt=""></i><i class="d"><img src="assets/pieces/wK.svg" alt=""></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/wR.svg" alt=""></i></div></div>
+  <div class="clock active"><span>4:48</span></div>
+</div></div>
+</section>
+<section id="features" class="feats" aria-labelledby="features-title"><h2 id="features-title" class="sr-only">Features</h2><article class="feat"><div class="board small" aria-hidden="true"><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/bK.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/bB.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"><img src="assets/pieces/wK.svg" alt=""></i><i class="l hit"></i><i class="d"></i><i class="l"><img src="assets/pieces/wR.svg" alt=""></i><svg viewBox="0 0 8 8" aria-hidden="true"><defs><marker id="ah-red" viewBox="0 0 4 4" refX="2" refY="2" markerWidth="2.2" markerHeight="2.2" orient="auto"><path d="M0 0L4 2L0 4z" fill="#A8322A"/></marker></defs><line x1="2.5" y1="4.5" x2="4.96" y2="6.96" stroke="#A8322A" stroke-width="0.22" stroke-linecap="round" marker-end="url(#ah-red)" opacity="0.9"/></svg></div><h3>Rules arbiter</h3><p>Illegal moves explained in plain language: castling through check, pinned pieces, en passant timing. Tournament mode applies FIDE penalties.</p></article><article class="feat"><div class="board small" aria-hidden="true"><i class="l"><img src="assets/pieces/bR.svg" alt=""></i><i class="d"><img src="assets/pieces/bN.svg" alt=""></i><i class="l"><img src="assets/pieces/bB.svg" alt=""></i><i class="d"><img src="assets/pieces/bQ.svg" alt=""></i><i class="l"><img src="assets/pieces/bK.svg" alt=""></i><i class="d"><img src="assets/pieces/bB.svg" alt=""></i><i class="l"><img src="assets/pieces/bN.svg" alt=""></i><i class="d"><img src="assets/pieces/bR.svg" alt=""></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"><img src="assets/pieces/bP.svg" alt=""></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"></i><i class="d"></i><i class="l"><img src="assets/pieces/wN.svg" alt=""></i><i class="d"></i><i class="l"></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="l"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wP.svg" alt=""></i><i class="d"><img src="assets/pieces/wR.svg" alt=""></i><i class="l"><img src="assets/pieces/wN.svg" alt=""></i><i class="d"><img src="assets/pieces/wB.svg" alt=""></i><i class="l"><img src="assets/pieces/wQ.svg" alt=""></i><i class="d"><img src="assets/pieces/wK.svg" alt=""></i><i class="l"><img src="assets/pieces/wB.svg" alt=""></i><i class="d"></i><i class="l"><img src="assets/pieces/wR.svg" alt=""></i><svg viewBox="0 0 8 8" aria-hidden="true"><defs><marker id="ah-green" viewBox="0 0 4 4" refX="2" refY="2" markerWidth="2.2" markerHeight="2.2" orient="auto"><path d="M0 0L4 2L0 4z" fill="#3E5C4B"/></marker></defs><line x1="6.5" y1="7.5" x2="5.68" y2="5.86" stroke="#3E5C4B" stroke-width="0.22" stroke-linecap="round" marker-end="url(#ah-green)" opacity="0.9"/></svg></div><h3>Voice moves</h3><p>Say “knight f3” or “short castle”. Hands stay on the board; the app keeps score.</p></article><article class="feat"><h3>Report and PGN</h3><p>Every game is saved with an arbiter report: rulings, draw offers, clock corrections. Export all games as PGN.</p></article><article class="feat"><h3>Every time control</h3><p>Fischer increment, Bronstein and simple delay, multi-stage classical controls, handicap times.</p></article></section>
+<section id="learn" class="learn">
+  <h2>Learn the rules while you play</h2><p>Short lessons with interactive boards, from how the pieces move to the arbiter's rules.</p>
+  <div class="stats"><div><b>16</b><span>rules lessons</span></div><div><b>29</b><span>openings</span></div><div><b>60</b><span>puzzles</span></div><div><b>116</b><span>glossary terms</span></div></div>
+</section>
+<section class="for">
+  <div><h2>Built for</h2><ul><li>Home and café games</li><li>Club nights and school chess</li><li>Training matches</li><li>Teaching children the rules</li><li>Arbiter practice</li></ul></div>
+  <p class="fide">In FIDE-rated games, players may not have a phone or other electronic device in the playing area unless the arbiter allows it (FIDE Laws, Article 11.3). Chess Arbiter is for casual, club, school and training games.</p>
+</section>
+<section class="privacy"><h2>No account. No ads. No data collection.</h2><p>Your games stay on your device. Voice moves are turned into text on the device; if your device doesn't recognise the language, Apple's speech recognition service does it. The app stores and sends nothing.</p></section>
+<section id="faq" class="faq"><h2>Questions</h2><details><summary>Is it free?</summary><p>Yes. Everyone who installs it before Pro arrives in 2027 keeps every feature free, including Pro, permanently.</p></details><details><summary>Can I use it in a rated tournament?</summary><p>No. In FIDE-rated games, players may not have a phone or other electronic device in the playing area unless the arbiter allows it (FIDE Laws, Article 11.3). Chess Arbiter is for casual, club, school and training games.</p></details><details><summary>Does it need the internet?</summary><p>No. It works fully offline.</p></details><details><summary>Which devices and languages?</summary><p>iPhone and iPad. English and Turkish.</p></details><details><summary>Is it affiliated with FIDE?</summary><p>No. It follows the FIDE Laws of Chess but is not affiliated with or endorsed by FIDE.</p></details></section>
 </main>
+<footer class="bottom">
+  <nav aria-label="Site"><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="licenses/">Licences</a></nav>
+  <p>© 2026 Uğur Aydın. Chess Arbiter is not affiliated with FIDE.</p>
+</footer>
 </body>
 </html>
