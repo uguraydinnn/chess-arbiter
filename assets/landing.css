@@ -1,6 +1,6 @@
-@font-face { font-family: Manrope; font-weight: 300; font-display: swap; src: url(fonts/Manrope_300Light.ttf); }
-@font-face { font-family: Manrope; font-weight: 400; font-display: swap; src: url(fonts/Manrope_400Regular.ttf); }
-@font-face { font-family: Manrope; font-weight: 600; font-display: swap; src: url(fonts/Manrope_600SemiBold.ttf); }
+@font-face { font-family: Manrope; font-weight: 300; font-display: swap; src: url(fonts/Manrope_300Light.woff2) format("woff2"); }
+@font-face { font-family: Manrope; font-weight: 400; font-display: swap; src: url(fonts/Manrope_400Regular.woff2) format("woff2"); }
+@font-face { font-family: Manrope; font-weight: 600; font-display: swap; src: url(fonts/Manrope_600SemiBold.woff2) format("woff2"); }
 
 /* Sahne: uygulamanın vurgu yeşili zemin; ilk ekranda büyük şimşir şah, bölüm aralarında kitap süslemesi gibi
    küçük beyaz taşlar (Blender'da modellenip illüstrasyon olarak render edildi). Görseller uygulamanın gerçek ekranları. */
