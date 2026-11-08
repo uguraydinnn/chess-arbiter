@@ -11,13 +11,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<header class="top"><div class="bar"><a class="brand" href="../"><img src="../assets/icon-56.png" alt="" width="28" height="28"> Chess Arbiter</a><a class="home" href="../">Home / Ana sayfa</a></div></header>
 <main>
-  <h1>Chess Arbiter</h1>
-  <p class="meta">Support · Destek</p>
-  <p class="lang"><a href="#en" lang="en">English</a> · <a href="#tr" lang="tr">Türkçe</a></p>
+  <h1>Support / Destek</h1>
+  <p class="meta">Chess Arbiter</p>
+  <p class="lang"><a href="#en" lang="en">English</a> / <a href="#tr" lang="tr">Türkçe</a></p>
 
   <section id="en" lang="en">
     <h2>Support</h2>
@@ -27,13 +30,28 @@
     <p>Hold the pause button above the board. A single tap only shows a hint, so knocking the screen during a game cannot pause it. In Tournament mode, hold the menu button the same way while the clock runs.</p>
 
     <h3>How do I enter moves?</h3>
-    <p>Drag or tap a piece on the board in the middle of the clock screen, or tap your own microphone below the board (at your end; only the player to move can use theirs) and say the move, for example "knight f3" or "short castle". Moves are checked against the FIDE Laws of Chess.</p>
+    <p>Drag or tap a piece on the board in the middle of the clock screen, or tap your own microphone below the board (at your end; only the player to move can use theirs) and say the move, for example "knight f3" or "short castle". Moves are checked against the FIDE Laws of Chess. Moves are recorded in the Rules check and Tournament modes; in Off mode the app is a clock only.</p>
 
     <h3>Voice entry does not work</h3>
     <p>Allow microphone and speech recognition access for Chess Arbiter in iOS Settings. The board always works without them.</p>
 
     <h3>How do I save my games elsewhere?</h3>
-    <p>In "My games", export all games as a PGN file or share a single game. PGN files from other apps can be imported there too.</p>
+    <p>In "My games", export all games as a PGN file or share a single game. To import, copy PGN text from another app and paste it under "Import PGN". "My games" keeps up to 500 games; when it is full, the oldest games are removed, so export the games you want to keep.</p>
+
+    <h3>Which time controls are there?</h3>
+    <p>Ready presets from bullet to classical, including multi-stage FIDE and delay controls, or a custom time with Fischer increment, Bronstein or simple delay. Black can have a different time.</p>
+
+    <h3>I recorded a wrong move or pressed the clock by mistake</h3>
+    <p>Open the menu: "Undo press" gives the turn back, and "Delete last note" removes the last recorded move. In Tournament mode both go into the arbiter report.</p>
+
+    <h3>What does a Tournament-mode penalty cost?</h3>
+    <p>An illegal move or illegal action gives the opponent +2 minutes in classical games and +1 minute in rapid and blitz; a second one loses the game, or draws it if the opponent cannot checkmate. An incorrect draw claim also gives the opponent extra time.</p>
+
+    <h3>The clocks swapped sides when I turned the phone</h3>
+    <p>That is on purpose: turn the phone around on the table and each clock stays with its player. You can turn this off in Settings, under Appearance, Clock screen.</p>
+
+    <h3>How do I report a bug?</h3>
+    <p>In the app, open "Settings and info", then "Contact and support": the email opens with your app version and device already filled in. A screenshot, or the game's PGN or arbiter report, helps a lot.</p>
 
     <h3>How do I delete my data?</h3>
     <p>Open a game in "My games" and tap "Delete game", or delete the app to remove everything. No data is stored anywhere else.</p>
@@ -47,19 +65,34 @@
     <p>Tahtanın üstündeki duraklatma düğmesini basılı tutun. Tek dokunuş yalnız ipucu gösterir; oyun sırasında ekrana çarpmak saati durdurmaz. Turnuva modunda saat işlerken menü düğmesi de aynı şekilde basılı tutularak açılır.</p>
 
     <h3>Hamleleri nasıl girerim?</h3>
-    <p>Oyun ekranının ortasındaki tahtada taşı sürükleyin ya da dokunun, veya tahtanın altında kendi ucunuzdaki mikrofona dokunup (yalnız sırası gelen oyuncununki çalışır) hamleyi söyleyin, ör. "at f3" ya da "kısa rok". Hamleler FIDE Satranç Kurallarına göre denetlenir.</p>
+    <p>Oyun ekranının ortasındaki tahtada taşı sürükleyin ya da dokunun, veya tahtanın altında kendi ucunuzdaki mikrofona dokunup (yalnız sırası gelen oyuncununki çalışır) hamleyi söyleyin, ör. "at f3" ya da "kısa rok". Hamleler FIDE Satranç Kurallarına göre denetlenir. Hamle kaydı Denetim ve Turnuva modlarında tutulur; Kapalı modda uygulama yalnız saattir.</p>
 
     <h3>Sesli giriş çalışmıyor</h3>
     <p>iOS Ayarlar'da Chess Arbiter için mikrofon ve ses tanıma iznini açın. Tahtadan giriş izin olmadan da her zaman çalışır.</p>
 
     <h3>Oyunlarımı başka yere nasıl kaydederim?</h3>
-    <p>"Oyunlarım"da bütün oyunları PGN dosyası olarak dışa aktarın ya da tek bir oyunu paylaşın. Başka uygulamalardan PGN dosyaları da oradan içe aktarılabilir.</p>
+    <p>"Oyunlarım"da bütün oyunları PGN dosyası olarak dışa aktarın ya da tek bir oyunu paylaşın. İçe aktarmak için başka bir uygulamadan PGN metnini kopyalayıp "PGN içe aktar"a yapıştırın. "Oyunlarım" en çok 500 oyun saklar; dolunca en eski oyunlar silinir. Saklamak istediğiniz oyunları dışarı aktarın.</p>
+
+    <h3>Hangi süre kontrolleri var?</h3>
+    <p>Bulletten klasiğe hazır süreler (çok aşamalı FIDE ve gecikmeli süreler dahil) ya da Fischer artışı, Bronstein veya basit gecikmeyle özel süre. Siyaha farklı süre verilebilir.</p>
+
+    <h3>Yanlış hamle kaydettim ya da saate yanlışlıkla bastım</h3>
+    <p>Menüyü açın: "Basışı geri al" sırayı geri verir, "Son notu sil" son kaydedilen hamleyi siler. Turnuva modunda ikisi de hakem raporuna yazılır.</p>
+
+    <h3>Turnuva modunda ceza ne kadar?</h3>
+    <p>Kural dışı hamle ya da davranış rakibe klasik sürede +2 dakika, rapid ve blitzde +1 dakika verir; ikincisi oyunu kaybettirir; rakibin mat edecek taşı yoksa oyun berabere biter. Haksız beraberlik talebi de rakibe ek süre kazandırır.</p>
+
+    <h3>Telefonu çevirince saatler yer değiştirdi</h3>
+    <p>Bu bilerek böyle yapıldı: telefonu masada döndürdüğünüzde her saat kendi oyuncusunun önünde kalır. Ayarlar'da Görünüm, Saat ekranı altından kapatabilirsiniz.</p>
+
+    <h3>Hatayı nasıl bildiririm?</h3>
+    <p>Uygulamada "Ayarlar ve bilgi", ardından "İletişim ve destek"i açın; e-posta uygulama sürümü ve cihaz bilgisiyle hazır açılır. Ekran görüntüsü ya da oyunun PGN'i veya hakem raporu çok yardımcı olur.</p>
 
     <h3>Verilerimi nasıl silerim?</h3>
     <p>"Oyunlarım"da bir oyunu açıp "Oyunu sil"e dokunun ya da her şeyi kaldırmak için uygulamayı silin. Veriler başka hiçbir yerde saklanmaz.</p>
   </section>
 
 </main>
-<footer><a href="../privacy/">Privacy Policy · Gizlilik Politikası</a></footer>
+<footer><a href="../support/">Support / Destek</a><a href="../privacy/">Privacy / Gizlilik</a><a href="../licenses/">Licenses / Lisanslar</a></footer>
 </body>
 </html>
