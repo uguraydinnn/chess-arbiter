@@ -1,26 +1,50 @@
+@font-face { font-family: Manrope; font-weight: 300; font-display: swap; src: url(assets/fonts/Manrope_300Light.ttf); }
 @font-face { font-family: Manrope; font-weight: 400; font-display: swap; src: url(assets/fonts/Manrope_400Regular.ttf); }
 @font-face { font-family: Manrope; font-weight: 600; font-display: swap; src: url(assets/fonts/Manrope_600SemiBold.ttf); }
-:root { color-scheme: light dark; --paper-dim: #ece7dc; --paper: #f6f3ec; --ink: #1d1c1a; --soft: #6b675f; --line: #c9c2b4; --accent: #3e5c4b; }
-@media (prefers-color-scheme: dark) { :root { --paper-dim: #23211e; --paper: #161513; --ink: #ece7dc; --soft: #a39d91; --line: #3a3732; --accent: #8db59c; } }
+
+/* Alt sayfalar (gizlilik, destek, lisanslar, 404): ana sayfayla aynı yeşil zemin, ince başlıklar, aynı başlık ve alt bilgi. */
+:root {
+  color-scheme: dark;
+  --green: #3e5c4b; --green-deep: #2f4a3c; --paper: #f6f3ec; --ink: #1d1c1a;
+  --soft: rgb(246 243 236 / .84); --rule: rgb(246 243 236 / .22); --rule-strong: rgb(246 243 236 / .6);
+  --pad: max(24px, (100vw - 1120px) / 2 + 24px);
+}
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 Manrope, -apple-system, "Segoe UI", sans-serif; }
-::selection { background: var(--accent); color: var(--paper); }
+body { margin: 0; background: var(--green); color: var(--paper); font: 400 17px/1.65 Manrope, -apple-system, "Segoe UI", sans-serif; }
+::selection { background: var(--paper); color: var(--green); }
 a { color: inherit; text-underline-offset: 3px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.top { border-bottom: 1px solid var(--ink); }
-.top .bar { max-width: 760px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
+
+/* Başlık: marka solda, ana sayfa bağlantısı sağda (ana sayfadaki çubukla aynı ölçüler). */
+.top .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; padding: 0 var(--pad); }
+.brand { display: flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 600; letter-spacing: .14em; font-size: 13px; text-transform: uppercase; text-decoration: none; }
 .brand img { border-radius: 7px; }
-.home { padding: 10px 0; font-size: 15px; }
-.home:hover, nav a:hover { background: var(--paper-dim, transparent); }
-main { max-width: 760px; margin: 0 auto; padding: 40px 20px 32px; }
-h1 { font-weight: 600; font-size: 36px; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 6px; }
-h2 { font-weight: 600; font-size: 24px; letter-spacing: -0.01em; margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--line); }
-h3 { font-weight: 600; font-size: 17px; margin: 24px 0 4px; }
+.home { display: flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none; }
+.home:hover { text-decoration: underline; }
+
+/* İçerik: okunur satır uzunluğunda, sol kenar ana sayfanın içerik kenarıyla aynı. */
+main { padding: 72px var(--pad) 96px; }
+main > * { max-width: 760px; }
+h1 { font-weight: 300; font-size: clamp(40px, 5vw, 64px); letter-spacing: -0.025em; line-height: 1.05; margin: 0 0 14px; text-wrap: balance; }
+h2 { font-weight: 300; font-size: clamp(28px, 3vw, 36px); letter-spacing: -0.02em; line-height: 1.1; margin: 64px 0 16px; padding-top: 28px; border-top: 1px solid var(--rule-strong); }
+h3 { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; margin: 32px 0 6px; }
 p, li { margin: 0 0 12px; max-width: 40em; }
+section p, section li { color: var(--soft); }
 .meta { color: var(--soft); font-size: 14px; margin-bottom: 20px; }
 .lang { font-size: 15px; }
-nav { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-nav a { display: inline-block; padding: 10px 16px; border: 1px solid var(--ink); text-decoration: none; }
-body > footer a { display: inline-block; padding: 10px 0; margin-right: 20px; }
-body > footer { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; border-top: 1px solid var(--ink); color: var(--soft); font-size: 14px; }
+.lang a { font-weight: 600; }
+
+/* 404 sayfasındaki bağlantılar: ana sayfanın alt bilgi düğmeleri gibi. */
+main nav { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+main nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--rule-strong); text-decoration: none; }
+main nav a:hover { background: rgb(246 243 236 / .08); }
+
+/* Alt bilgi: ana sayfadaki koyu yeşil şerit ve çerçeveli bağlantılar. */
+body > footer { display: flex; gap: 12px; flex-wrap: wrap; padding: 40px var(--pad) 56px; background: var(--green-deep); color: var(--soft); font-size: 14px; }
+body > footer a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--rule-strong); color: var(--paper); text-decoration: none; }
+body > footer a:hover { background: rgb(246 243 236 / .08); }
+
+@media (max-width: 600px) {
+  :root { --pad: 18px; }
+  main { padding-top: 40px; padding-bottom: 72px; }
+}
