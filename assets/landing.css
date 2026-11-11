@@ -147,6 +147,9 @@ figcaption { width: fit-content; font-size: 14px; line-height: 1.5; color: var(-
 .bottom nav { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
 .bottom nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--rule-strong); color: var(--paper); text-decoration: none; }
 .bottom nav a:hover { background: rgb(246 243 236 / .08); }
+.bottom .foot-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 16px; }
+.bottom .foot-row nav { margin-bottom: 0; }
+.bottom nav.social { gap: 8px; }
 .bottom nav.social a { width: 44px; padding: 0; justify-content: center; }
 .bottom nav.social svg { display: block; }
 
