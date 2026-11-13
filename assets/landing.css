@@ -81,6 +81,10 @@ figcaption { width: fit-content; font-size: 14px; line-height: 1.5; color: var(-
 .btn { display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; background: var(--paper); color: var(--green); font-weight: 600; text-decoration: none; }
 .btn:hover { text-decoration: underline; }
 .note { flex-basis: 100%; font-size: 14px; color: var(--soft); }
+/* Posta uygulaması açılmazsa adres elle kopyalanabilsin. */
+.mailline { flex-basis: 100%; margin: 0; font-size: 14px; color: var(--soft); }
+.mailline .addr { color: var(--paper); font-weight: 600; user-select: all; overflow-wrap: anywhere; }
+.cta .mailline { margin-top: 14px; }
 .hero .shot.wide { margin-top: 72px; }
 
 /* Özellik bölümleri: yazı solda, görsel sağda. */

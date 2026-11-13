@@ -43,6 +43,11 @@ main nav a:hover { background: rgb(246 243 236 / .08); }
 body > footer { display: flex; gap: 12px; flex-wrap: wrap; padding: 40px var(--pad) 56px; background: var(--green-deep); color: var(--soft); font-size: 14px; }
 body > footer a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--rule-strong); color: var(--paper); text-decoration: none; }
 body > footer a:hover { background: rgb(246 243 236 / .08); }
+/* Sosyal simgeler: ana sayfadaki gibi sağda, 44 px kare. */
+body > footer .social { display: flex; gap: 8px; margin-left: auto; }
+body > footer .social a { width: 44px; padding: 0; justify-content: center; }
+body > footer .social svg { display: block; }
+@media (max-width: 600px) { body > footer .social { flex-basis: 100%; margin: 16px 0 0; } }
 
 @media (max-width: 600px) {
   :root { --pad: 18px; }
