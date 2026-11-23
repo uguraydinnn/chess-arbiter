@@ -12,6 +12,7 @@
   --pad-l: max(24px, (100vw - 1120px) / 2 + 24px);
   --hero-kw: min(32vw, 440px, calc(100vh - 200px));
   --drop: drop-shadow(0 22px 28px rgb(10 20 14 / .35));
+  --drop-pad: 8px 30px 54px; --drop-pad-neg: -8px -30px -54px;
   --textmax: 720px;
   --cols: minmax(0, 5fr) minmax(0, 7fr); --gut: 64px; --h2: clamp(30px, 3.1vw, 40px);
 }
@@ -48,6 +49,11 @@ section { position: relative; padding-top: 112px; padding-bottom: 112px; overflo
 
 /* Ağaç taşlar: içeriğin arkasında, kenarlardan taşar; kaydırdıkça yavaşça döner (destekleyen tarayıcılarda). */
 .piece { position: absolute; z-index: 0; height: auto; pointer-events: none; filter: var(--drop); }
+/* Gölge, öğenin kendi kutusunun içinde kalsın: Safari geç yüklenen görselde yalnız kutuyu yeniden boyar ve
+   kutunun dışına taşan gölgeyi kesik bir dikdörtgen gibi bırakır. Saydam iç boşluk gölgeye yer açar,
+   eksi dış boşluk yerleşimi aynı tutar. */
+.piece, .shot img { box-sizing: content-box; padding: var(--drop-pad); margin: var(--drop-pad-neg); }
+.piece { transform-origin: 50% calc(50% - 22px); }
 /* İlk ekran: büyük şimşir şah başlığın sağında. */
 .p-hero { width: var(--hero-kw); right: var(--pad-l); top: 88px; }
 /* Bölüm süslemesi: her iki bölümün arasındaki boşlukta, sayfanın tam ortasında küçük bir taş. */
@@ -105,7 +111,7 @@ figcaption { width: fit-content; font-size: 14px; line-height: 1.5; color: var(-
 /* Tahta başı */
 /* Cihaz grubu: iPad arkada, iki iPhone önde köşelerine biner (tek görsel, gerçek ölçek). */
 .shot.devices { margin-top: 56px; }
-.shot.devices img { filter: none; }
+.shot.devices img { filter: none; padding: 0; margin: 0; }
 .table h2 { position: relative; z-index: 1; }
 .table .cols { position: relative; z-index: 1; display: grid; grid-template-columns: var(--cols); column-gap: var(--gut); row-gap: 32px; margin-top: 72px; }
 .table h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 8px; border-bottom: 1px solid var(--rule-strong); }
@@ -175,6 +181,8 @@ figcaption { width: fit-content; font-size: 14px; line-height: 1.5; color: var(-
   html { scroll-padding-top: 124px; }
   section { padding-top: 72px; padding-bottom: 72px; }
   .piece { opacity: .9; }
+  /* Dar ekranda şah telefonun üst kenarında sabit durur; kaydırınca aşağı süzülürse telefon görselinin arkasına girer. */
+  .p-hero { animation: none; }
   /* İlk ekran şahı telefon görselinin üst kenarında durur. */
   .hero .shot.wide { margin-top: max(120px, calc(28vw - 4px)); }
   .p-hero { width: 28vw; right: -2vw; top: auto; bottom: calc(72px + (100vw - 48px) * 1049 / 2144 - 10px); }
